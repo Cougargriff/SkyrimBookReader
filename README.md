@@ -7,9 +7,11 @@
  
 [![Platform](https://img.shields.io/badge/language-kotlin-orange)](#) 
 
+## Description
 
 Behold ye scoundrels for I have compiled a complete anthology of the written works of our beloved Skyrim. Using Jsoup I have scraped all the written texts from https://en.uesp.net/wiki/Skyrim:Books where I am compiling them into a collection for your enjoyment. 
 
+## Usage
 Simply compile the code for kotlin under the jvm and enjoy :fire:
 
 Peep the source code. 
