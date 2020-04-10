@@ -12,13 +12,10 @@ fun main(args : Array<String>)
     /* Callback to print books after Async scrape call */
     var cb = fun (books : ArrayList<Book>) {
         /* Print Out All Book Names */
-        System.out.println("********** " + books.size + " of Skyrim's Written Works **********")
-        var i = 0
-        for(book in books)
-        {
-            var line = String.format("%1$-40s %2$10d", book.title, i)
-            System.out.println(line)
-            i++
+        System.out.println("********************  " + books.size + " of Skyrim's Written Works ********************")
+        books.forEachIndexed { index, book ->
+            var line = String.format("%1\$-40s %2$10d", book.title, index)
+            System.out.printf("%1\$-45s" + " - " + line + "\n", book.author)
         }
     }
 
