@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eb6a62de-62f0-43e5-9621-f56e71747dcf" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aKwHtjOulCqf4v6ReV74y4obLy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="Kotlin SDK" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="SkyrimBooks.main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SkyrimBooks" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb6a62de-62f0-43e5-9621-f56e71747dcf" name="Default Changelist" comment="" />
+      <created>1586497508168</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586497508168</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1512" y="361" key="#Project_Structure" timestamp="1586497669563">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1512" y="361" key="#Project_Structure/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586497669563" />
+    <state x="1639" y="357" key="#Unnamed" timestamp="1586497928810">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1639" y="357" key="#Unnamed/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586497928810" />
+    <state x="1374" y="357" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586498246227">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1374" y="357" key="#com.intellij.execution.impl.EditConfigurationsDialog/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586498246227" />
+    <state x="1649" y="486" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586498245028">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1649" y="486" key="#com.intellij.ide.util.TreeClassChooserDialog/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586498245028" />
+    <state x="1700" y="457" key="FileChooserDialogImpl" timestamp="1586497982754">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1700" y="457" key="FileChooserDialogImpl/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586497982754" />
+    <state width="1234" height="791" key="GridCell.Tab.0.bottom" timestamp="1586502443002">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="791" key="GridCell.Tab.0.bottom/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586502443002" />
+    <state width="1234" height="791" key="GridCell.Tab.0.center" timestamp="1586502443002">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="791" key="GridCell.Tab.0.center/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586502443002" />
+    <state width="1234" height="791" key="GridCell.Tab.0.left" timestamp="1586502443002">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="791" key="GridCell.Tab.0.left/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586502443002" />
+    <state width="1234" height="791" key="GridCell.Tab.0.right" timestamp="1586502443002">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="791" key="GridCell.Tab.0.right/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586502443002" />
+    <state width="1234" height="791" key="GridCell.Tab.1.bottom" timestamp="1586502443002">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="791" key="GridCell.Tab.1.bottom/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586502443002" />
+    <state width="1234" height="791" key="GridCell.Tab.1.center" timestamp="1586502443002">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="791" key="GridCell.Tab.1.center/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586502443002" />
+    <state width="1234" height="791" key="GridCell.Tab.1.left" timestamp="1586502443002">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="791" key="GridCell.Tab.1.left/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586502443002" />
+    <state width="1234" height="791" key="GridCell.Tab.1.right" timestamp="1586502443002">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="791" key="GridCell.Tab.1.right/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586502443002" />
+    <state x="1273" y="700" width="1294" height="707" key="dock-window-1" timestamp="1586498317773">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1273" y="700" width="1294" height="707" key="dock-window-1/-3840.0.3072.1696/0.0.2560.1400@0.0.2560.1400" timestamp="1586498317773" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <line>16</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
