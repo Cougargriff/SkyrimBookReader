@@ -16,7 +16,7 @@ Behold ye scoundrels for I have compiled a complete anthology of the written wor
 ## Usage
 Simply compile the code for kotlin under the jvm and enjoy :fire:
 
-> Get Gradle  
+> Gradle !!  
 
 You will need gradle to run this project. Here is the <a href="https://jsoup.org/download">current version</a>. 
 
