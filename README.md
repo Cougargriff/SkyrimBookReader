@@ -3,11 +3,7 @@
 
  > EBook Reader For Skyrim!
  
- > Learn to Scrape!
- 
- > Uses Jsoup to scrape in kotlin!
 
- 
 [![Platform](https://img.shields.io/badge/language-kotlin-orange)](#) 
 
 ## Description
