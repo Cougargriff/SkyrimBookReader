@@ -1,5 +1,27 @@
+import javafx.scene.Parent
+import javafx.scene.text.FontWeight
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
+import tornadofx.*
+
+/* Setup View */
+class HelloWorld : View()
+{
+    override val root = hbox {
+        label("hello world")
+    }
+}
+
+class HelloWorldApp : App(HelloWorld::class, Styles::class)
+class Styles : Stylesheet() {
+    init {
+        label {
+            fontSize = 20.px
+            fontWeight = FontWeight.BOLD
+            backgroundColor += c("#cecece")
+        }
+    }
+}
 
 /* GLOBAL Endpoints */
 private val BASE_URL = "https://en.uesp.net"
@@ -9,6 +31,8 @@ data class Book(val author : String, val capt : String, val title : String, val 
 
 fun main(args : Array<String>)
 {
+    launch<HelloWorldApp>(args)
+
     /* Callback to print books after Async scrape call */
     var cb = fun (books : ArrayList<Book>) {
         /* Print Out All Book Names */
