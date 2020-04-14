@@ -3,7 +3,12 @@ import javafx.scene.text.FontWeight
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import tornadofx.*
+import java.lang.StringBuilder
 
+/* Constants */
+private val NEW_LINE = "\n"
+
+/* Hello World sample for TornadoFX TODO */
 /* Setup View */
 class HelloWorld : View()
 {
@@ -26,12 +31,14 @@ class Styles : Stylesheet() {
 /* GLOBAL Endpoints */
 private val BASE_URL = "https://en.uesp.net"
 private val ALL_BOOKS = "/wiki/Skyrim:Books"
+private val FILE_PRE = "/wiki/File:"
 
-data class Book(val author : String, val capt : String, val title : String, val URL : String)
+data class Book(val author : String, val capt : String, val title : String, val URL : String, val details : Contents?)
+data class Contents(val text : String, val img : String)
 
 fun main(args : Array<String>)
 {
-    launch<HelloWorldApp>(args)
+   // launch<HelloWorldApp>(args)
 
     /* Callback to print books after Async scrape call */
     var cb = fun (books : ArrayList<Book>) {
@@ -43,7 +50,56 @@ fun main(args : Array<String>)
         }
     }
 
-    scrape_books(cb)
+    var books = scrape_books(cb)
+    var contents = getText(books[0].URL)
+    System.out.println("hello world")
+}
+
+private fun getImg(url: String)
+{
+    /* TODO use contents to retrieve and display img in tornadoFX */
+}
+
+private fun getText(url: String) : Contents?
+{
+    var cells = ArrayList<String>()
+    var contents : Contents?
+    var text = StringBuilder()
+    var img = ""
+    Jsoup.connect(BASE_URL + url).get().run {
+        select("div.book").first().children().forEachIndexed { index, element ->
+            if (element.tagName().compareTo("p") == 0 || element.tagName().compareTo("dl") == 0)
+            {
+                if(index == 0)
+                {
+                    cells.add(element.select("img").attr("title").toString()
+                    + element.text())
+                }
+                else
+                {
+                    cells.add(element.text())
+                }
+            }
+        }
+        select("#mw-content-text > table > tbody > tr:nth-child(1) > th > div:nth-child(1) > a > img")
+            .forEachIndexed { index, element ->
+            img = element.attr("alt").toString()
+        }
+    }.also {
+        /* construct content class from text cells */
+        for (line in cells)
+        {
+            text.append(line)
+            text.append(NEW_LINE)
+        }
+
+        if(text.toString().isBlank() || img.isBlank())
+        {
+            return null
+        }
+
+        return Contents(text.toString(), img)
+    }
 }
 
 private fun scrape_books(cb : (ArrayList<Book>) -> Unit) : ArrayList<Book>
@@ -68,7 +124,7 @@ private fun scrape_books(cb : (ArrayList<Book>) -> Unit) : ArrayList<Book>
             val title = eles[1].select("i").select("b").text()
             val url = eles[1].select("a").attr("href")
             val author = eles[3].select("a").text()
-            books.add(Book(author, capt, title, url))
+            books.add(Book(author, capt, title, url, null))
         }
     }.also {
         cb(books)
