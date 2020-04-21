@@ -7,19 +7,18 @@ import javafx.scene.control.TableView
 
 class BookList() : View("Book List")
 {
-
-      override val root = (
-        getView()
-    )
+    override val root = getView()
 
     private fun getView() : TableView<Book>
     {
         getEReader().also {
-            return tableview (it.observable()) {
-
+            return tableview (ArrayList<Book>().observable()) {
+//                runAsync {
+//                    getEReader()
+//                } ui {
+//                    this.items = it.observable()
+//                }
             }
         }
-
     }
-
 }

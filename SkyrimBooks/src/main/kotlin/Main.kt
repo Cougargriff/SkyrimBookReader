@@ -29,7 +29,8 @@ class Book(author: String, capt: String, title: String, val URL: String, var det
 data class Content(val text: String, val img: String)
 
 fun main(args: Array<String>) {
-    launch<EReaderApp>(args)
+    //launch<EReaderApp>(args)
+    val books = getEReader()
     System.out.println("hello world")
 }
 
@@ -67,16 +68,21 @@ private fun getText(url: String): Content? {
     var text = StringBuilder()
     var img = ""
     Jsoup.connect(BASE_URL + url).get().run {
-        select("div.book").first().children().forEachIndexed { index, element ->
-            if (element.tagName().compareTo("p") == 0 || element.tagName().compareTo("dl") == 0) {
-                if (index == 0) {
-                    cells.add(
-                        element.select("img").attr("title").toString()
-                                + element.text()
-                    )
-                } else {
-                    cells.add(element.text())
+        select("div.book").run {
+            if(this.first() != null) {
+                this.first().children().forEachIndexed { index, element ->
+                    if (element.tagName().compareTo("p") == 0 || element.tagName().compareTo("dl") == 0) {
+                        if (index == 0) {
+                            cells.add(
+                                element.select("img").attr("title").toString()
+                                        + element.text()
+                            )
+                        } else {
+                            cells.add(element.text())
+                        }
+                    }
                 }
+
             }
         }
         select("#mw-content-text > table > tbody > tr:nth-child(1) > th > div:nth-child(1) > a > img")
