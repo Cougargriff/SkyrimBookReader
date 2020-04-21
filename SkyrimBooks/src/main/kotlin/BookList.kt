@@ -19,30 +19,32 @@ class BookList() : View("Book List")
             if (it.isPresent) {
                 if(it.get().buttonData.isCancelButton)
                 {
-                    System.out.println("here 1")
+                    placeHolder = "Not Preloading..."
+                    preload = false
                 }
                 else
                 {
-                    System.out.println("here 1")
+                    placeHolder = "Preloading may take awhile.\nDo not despair!"
+                    preload = true
                 }
             }
 
         }
     }
 
-    var preload = true
+    var preload : Boolean
+    var placeHolder : String
 
     override val root = getView()
 
 
     private fun getView() : TableView<Book>
     {
-
-
             return tableview (ArrayList<Book>().observable()) {
                 column("Author", Book::author)
                 column("Title", Book::title)
                 column("Details", Book::capt)
+                placeholder = label(placeHolder)
 
                 runAsync {
                     getEReader(preload)

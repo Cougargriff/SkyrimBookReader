@@ -52,14 +52,13 @@ fun getEReader(preload : Boolean): ArrayList<Book> {
     if(preload) {
         var books = scrape_books(cb).also {
             getAllTexts(it)
+        }.also {
+            return it
         }
     }
     else {
-        var books = scrape_books(cb)
+        return scrape_books(cb)
     }
-
-    return books
-
 }
 
 private fun getAllTexts(books: ArrayList<Book>) {
