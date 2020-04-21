@@ -14,7 +14,7 @@ private val ALL_BOOKS = "/wiki/Skyrim:Books"
 private val FILE_PRE = "/wiki/File:"
 
 /*
-    TODO decompose main, local storage, onClick for cell, styling
+    TODO decompose main, local storage, onClick for cell, styling, ERRORS!!
  */
 
 
@@ -40,12 +40,15 @@ fun main(args: Array<String>) {
 fun getEReader(preload : Boolean): ArrayList<Book> {
     /* Callback to print books after Async scrape call */
     var cb = fun(books: ArrayList<Book>) {
-        /* Print Out All Book Names */
+        /* Print Out All Book Names
         System.out.println("********************  " + books.size + " of Skyrim's Written Works ********************")
         books.forEachIndexed { index, book ->
             var line = String.format("%1\$-40s %2$10d", book.title, index)
             System.out.printf("%1\$-45s" + " - " + line + "\n", book.author)
         }
+
+         */
+        System.out.println("Fetched all Titles...")
     }
     lateinit var books : ArrayList<Book>
     /* Added preload for toggle load on child view if false... */
