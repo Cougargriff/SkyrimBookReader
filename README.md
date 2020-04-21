@@ -16,6 +16,8 @@ Simply compile the code for kotlin under the jvm and enjoy :fire:
 
 > Dependencies 
 
-You will need jsoup to build. Here is the <a href="https://jsoup.org/download">current version</a>. 
+You will need jsoup to build. Here is the <a href="https://jsoup.org/download">current version</a>.  
+You will also need TornadoFX for gui. Here is the <a href="https://github.com/edvin/tornadofx">current version</a>.
 
 Peep the source code. 
+Right now it fetches the texts of all books before showing any gui...
