@@ -10,11 +10,15 @@
 
 Behold ye scoundrels for I have compiled a complete anthology of the written works of our beloved Skyrim. Using Jsoup I have scraped all the written texts from https://en.uesp.net/wiki/Skyrim:Books where I am compiling them into a collection for your enjoyment. 
 
+[![Skyrim Books](https://github.com/Cougargriff/SkyrimBookReader/blob/master/Screenshots/tableView.PNG)](#) 
 ## Usage
 Simply compile the code for kotlin under the jvm and enjoy :fire:
 
 > Dependencies 
 
-You will need jsoup to build. Here is the <a href="https://jsoup.org/download">current version</a>. 
+You will need jsoup to build. Here is the <a href="https://jsoup.org/download">current version</a>.  
+You will also need TornadoFX for gui. Here is the <a href="https://github.com/edvin/tornadofx">current version</a>.
 
-Peep the source code. 
+> Peep the source code.  
+
+> Give it a second to load in all the books before showing...
