@@ -13,6 +13,10 @@ private val BASE_URL = "https://en.uesp.net"
 private val ALL_BOOKS = "/wiki/Skyrim:Books"
 private val FILE_PRE = "/wiki/File:"
 
+/*
+    TODO decompose main, local storage, onClick for cell, styling
+ */
+
 
 class Book(author: String, capt: String, title: String, val URL: String, var details: Content?) {
     var author by property<String>(author)
@@ -33,7 +37,7 @@ fun main(args: Array<String>) {
     System.out.println("hello world")
 }
 
-fun getEReader(): ArrayList<Book> {
+fun getEReader(preload : Boolean): ArrayList<Book> {
     /* Callback to print books after Async scrape call */
     var cb = fun(books: ArrayList<Book>) {
         /* Print Out All Book Names */
@@ -43,12 +47,19 @@ fun getEReader(): ArrayList<Book> {
             System.out.printf("%1\$-45s" + " - " + line + "\n", book.author)
         }
     }
-
-    var books = scrape_books(cb).also {
-        getAllTexts(it)
+    lateinit var books : ArrayList<Book>
+    /* Added preload for toggle load on child view if false... */
+    if(preload) {
+        var books = scrape_books(cb).also {
+            getAllTexts(it)
+        }
+    }
+    else {
+        var books = scrape_books(cb)
     }
 
     return books
+
 }
 
 private fun getAllTexts(books: ArrayList<Book>) {
