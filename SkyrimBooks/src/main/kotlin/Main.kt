@@ -29,8 +29,7 @@ class Book(author: String, capt: String, title: String, val URL: String, var det
 data class Content(val text: String, val img: String)
 
 fun main(args: Array<String>) {
-    //launch<EReaderApp>(args)
-    val books = getEReader()
+    launch<EReaderApp>(args)
     System.out.println("hello world")
 }
 

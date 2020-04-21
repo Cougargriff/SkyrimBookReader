@@ -13,11 +13,15 @@ class BookList() : View("Book List")
     {
         getEReader().also {
             return tableview (ArrayList<Book>().observable()) {
-//                runAsync {
-//                    getEReader()
-//                } ui {
-//                    this.items = it.observable()
-//                }
+                column("Author", Book::author)
+                column("Title", Book::title)
+                column("Details", Book::capt)
+                
+                runAsync {
+                    getEReader()
+                } ui {
+                    this.items = it.observable()
+                }
             }
         }
     }
