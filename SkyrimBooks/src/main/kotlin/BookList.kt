@@ -11,17 +11,15 @@ class BookList() : View("Book List")
 
     private fun getView() : TableView<Book>
     {
-        getEReader().also {
-            return tableview (ArrayList<Book>().observable()) {
-                column("Author", Book::author)
-                column("Title", Book::title) 
-                column("Details", Book::capt)
+        return tableview (ArrayList<Book>().observable()) {
+            column("Author", Book::author)
+            column("Title", Book::title)
+            column("Details", Book::capt)
 
-                runAsync {
-                    getEReader()
-                } ui {
-                    this.items = it.observable()
-                }
+            runAsync {
+                getEReader()
+            } ui {
+                this.items = it.observable()
             }
         }
     }
