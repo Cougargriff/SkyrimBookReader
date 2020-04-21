@@ -14,9 +14,9 @@ class BookList() : View("Book List")
         getEReader().also {
             return tableview (ArrayList<Book>().observable()) {
                 column("Author", Book::author)
-                column("Title", Book::title)
+                column("Title", Book::title) 
                 column("Details", Book::capt)
-                
+
                 runAsync {
                     getEReader()
                 } ui {
