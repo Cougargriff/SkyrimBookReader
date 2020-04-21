@@ -19,6 +19,6 @@ Simply compile the code for kotlin under the jvm and enjoy :fire:
 You will need jsoup to build. Here is the <a href="https://jsoup.org/download">current version</a>.  
 You will also need TornadoFX for gui. Here is the <a href="https://github.com/edvin/tornadofx">current version</a>.
 
-Peep the source code.  
+> Peep the source code.  
 
-Give it a second to load in all the books before showing...
+> Give it a second to load in all the books before showing...
