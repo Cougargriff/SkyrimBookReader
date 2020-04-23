@@ -1,12 +1,12 @@
+import javafx.scene.Parent
 import javafx.scene.control.Alert
+import javafx.scene.control.TableCell
 import tornadofx.*
-import javafx.scene.control.ListView
-import javafx.scene.control.TableColumn
 import javafx.scene.control.TableView
 
 /* View Class */
 
-class BookList() : View("Book List")
+class BookList : View("Book List")
 {
     init {
         var alert = Alert(Alert.AlertType.CONFIRMATION).apply {
@@ -46,12 +46,49 @@ class BookList() : View("Book List")
                 column("Details", Book::capt)
                 placeholder = label(placeHolder)
 
+                onDoubleClick {
+                    val selectedBook = this.selectedItem!!
+                    System.out.println("Opening {" + selectedBook.title + "} in new window...")
+                    find<BookView>(mapOf(
+                        "selection" to selectedBook,
+                        "preload" to preload
+                    )).apply {
+
+                    }.openModal()
+                }
+
                 runAsync {
-                    getEReader(preload)
+                    Scraper.getEReader(preload)
                 } ui {
                     this.items = it.observable()
                 }
             }
         }
+}
+
+class BookView : Fragment()
+{
+    val selection : Book by param()
+    val preload : Boolean by param()
+
+    lateinit var bookText : String
+
+    override val root =  scrollpane {
+        label {
+            this.text = "Book View"
+
+            runAsync {
+                if(preload) {
+                    bookText = selection.details!!.text
+                }
+                else {
+                    bookText = Scraper.getText(selection.URL)!!.text
+                }
+            } ui {
+                this.text = bookText
+            }
+        }
+        
+    }
 
 }
