@@ -50,11 +50,8 @@ class BookList : View("Book List")
                     val selectedBook = this.selectedItem!!
                     System.out.println("Opening {" + selectedBook.title + "} in new window...")
                     find<BookView>(mapOf(
-                        "selection" to selectedBook,
-                        "preload" to preload
-                    )).apply {
-
-                    }.openModal()
+                        "selection" to selectedBook
+                    )).openModal()
                 }
 
                 runAsync {
@@ -69,8 +66,6 @@ class BookList : View("Book List")
 class BookView : Fragment()
 {
     val selection : Book by param()
-    val preload : Boolean by param()
-
     lateinit var bookText : String
 
     override val root =  scrollpane {
@@ -78,7 +73,7 @@ class BookView : Fragment()
             this.text = "Book View"
 
             runAsync {
-                if(preload) {
+                if(selection.details != null) {
                     bookText = selection.details!!.text
                 }
                 else {
@@ -88,7 +83,5 @@ class BookView : Fragment()
                 this.text = bookText
             }
         }
-        
     }
-
 }
